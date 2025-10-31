@@ -1,0 +1,206 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Garvit — Portfolio</title>
+  <style>
+    :root{
+      --bg:#000;
+      --text:#fff;
+      --muted:#9aa0a6;
+      --accent:#00d1b2;
+      --maxw:900px;
+      --radius:10px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .page{
+      width:100%;
+      max-width:var(--maxw);
+      display:grid;
+      grid-template-rows:auto 1fr;
+      gap:28px;
+    }
+    header{
+      display:flex;
+      justify-content:flex-end;
+    }
+    .cv-link{
+      color:var(--text);
+      text-decoration:none;
+      border:1px solid rgba(255,255,255,0.08);
+      padding:10px 14px;
+      border-radius:8px;
+      transition:all .15s ease;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      font-weight:600;
+    }
+    .cv-link:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.6); }
+    main{
+      display:flex;
+      gap:40px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .intro{
+      flex:1 1 360px;
+      min-width:260px;
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size:clamp(28px,6vw,44px);
+      line-height:1.02;
+    }
+    p.lead{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+    .interests{
+      margin-top:12px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .tag{
+      background:rgba(255,255,255,0.04);
+      padding:6px 10px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+    .contact-card{
+      flex:0 1 360px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.04);
+      padding:18px;
+      border-radius:var(--radius);
+      min-width:260px;
+    }
+    label{ display:block; font-size:0.85rem; color:var(--muted); margin-bottom:6px; }
+    input[type="text"], input[type="email"], textarea{
+      width:100%;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.06);
+      background:rgba(255,255,255,0.01);
+      color:var(--text);
+      font-size:0.95rem;
+      outline:none;
+    }
+    textarea{ min-height:120px; resize:vertical; }
+    .row{ margin-bottom:12px; }
+    .submit{
+      display:inline-block;
+      background:var(--accent);
+      color:#001;
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+    }
+    .note{ font-size:0.85rem; color:var(--muted); margin-top:10px; }
+    .status{ margin-top:10px; font-size:0.95rem; }
+    @media(max-width:720px){
+      main{ flex-direction:column-reverse; gap:18px;}
+      header{ justify-content:center;}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <!-- Replace href with the path to your CV (e.g., CV.pdf) -->
+      <a class="cv-link" href="CV.pdf" target="_blank" rel="noopener">View CV</a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="who-heading">
+        <h1 id="who-heading">Hi — I'm Garvit.</h1>
+        <p class="lead">I'm a developer and designer interested in web, tooling, and human-centered interfaces. I build clean, fast, and accessible experiences.</p>
+
+        <div class="interests" aria-hidden="false">
+          <span class="tag">Web Development</span>
+          <span class="tag">Frontend</span>
+          <span class="tag">UX</span>
+          <span class="tag">Open Source</span>
+          <span class="tag">Design Systems</span>
+        </div>
+      </section>
+
+      <aside class="contact-card" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" style="margin:0 0 10px 0;">Get in touch</h2>
+        <form id="contact-form" method="POST" action="https://formspree.io/f/yourFormId">
+          <!-- Replace the action URL with your Formspree form endpoint -->
+          <div class="row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+
+          <div class="row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+
+          <div class="row">
+            <label for="message">What do you have in mind?</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div>
+            <button class="submit" type="submit">Send</button>
+          </div>
+
+          <p class="note">I’ll get back to you as soon as I can. No spam — ever.</p>
+          <div id="status" class="status" role="status" aria-live="polite"></div>
+        </form>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    (function(){
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('status');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = 'Sending…';
+        const url = form.action;
+        const data = new FormData(form);
+
+        try {
+          const res = await fetch(url, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            status.textContent = 'Thanks — I received your message.';
+            form.reset();
+          } else {
+            const json = await res.json().catch(()=>null);
+            status.textContent = (json && json.error) ? json.error : 'Submission failed. Please try again.';
+          }
+        } catch (err) {
+          status.textContent = 'Network error. Please try again.';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
