@@ -5,25 +5,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Garvit Sonawala</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<!-- Simple, content-first homepage -->
-<main style="max-width:720px;margin:6vh auto;text-align:center;font-family:system-ui,Arial,Helvetica,sans-serif;line-height:1.45;padding:24px">
-<img src="assets/profile.jpg" alt="Garvit Sonawala" style="width:140px;height:140px;border-radius:12px;object-fit:cover;display:block;margin:0 auto 18px" />
-<h1 style="margin:4px 0;font-size:28px">Garvit Sonawala</h1>
-<p style="margin:8px 0;color:#333;max-width:60ch;margin-left:auto;margin-right:auto">I’m a Master’s student at IISER Thiruvananthapuram and concurrently pursuing a BS in Data Science from IIT Madras. My academic interests lie in theoretical and computational cosmology, astroparticle physics, and applying data-driven methods to problems in high-energy physics and cosmology.</p>
+<body class="home" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/bg.jpg') center/cover no-repeat fixed; ">
 
 
-<div style="display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap">
-<a href="mailto:your.email@domain.com" style="padding:10px 14px;border-radius:8px;text-decoration:none;border:1px solid #ccc">Email</a>
-<a href="https://github.com/your-github" target="_blank" style="padding:10px 14px;border-radius:8px;text-decoration:none;border:1px solid #ccc">GitHub</a>
-<a href="https://www.linkedin.com/in/your-linkedin" target="_blank" style="padding:10px 14px;border-radius:8px;text-decoration:none;border:1px solid #ccc">LinkedIn</a>
-<a href="/files/Garvit_Sonawala_CV.pdf" download style="padding:10px 14px;border-radius:8px;text-decoration:none;border:1px solid #ccc">Download CV</a>
+<header class="site-header">
+  <div class="header-content">
+    <a href="index.html" class="logo">Garvit Sonawala</a>
+    <nav>
+      <a href="aboutme.html" class="nav-link">About</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<div class="profile">
+<img src="assets/profile.jpg" alt="Garvit Sonawala" class="profile-img">
+<div class="icons">
+<a href="mailto:your.email@domain.com" aria-label="Email">
+<!-- mail svg -->
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6.5v11c0 .8.7 1.5 1.5 1.5h15c.8 0 1.5-.7 1.5-1.5v-11c0-.8-.7-1.5-1.5-1.5h-15C3.7 5 3 5.7 3 6.5zM21 6.5l-9 6-9-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+<a href="https://www.linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn">
+<!-- linkedin svg -->
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5a2.5 2.5 0 11-.002 4.999A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM13 9h3.6v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.5V21h-4v-5.2c0-1.2 0-2.6-1.6-2.6-1.6 0-1.8 1.2-1.8 2.5V21h-4z" fill="currentColor"/></svg>
+</a>
+</div>
 </div>
 
 
-<footer style="margin-top:28px;color:#666;font-size:13px">Open to research internships & collaborations · IISER TVM · BS Data Science (IIT Madras)</footer>
+<div class="intro">
+<h1>Garvit Sonawala</h1>
+<p class="blurb">I’m a Master’s student at IISER Thiruvananthapuram and concurrently pursuing a BS in Data Science from IIT Madras. My academic interests lie in theoretical and computational cosmology, astroparticle physics, and applying data-driven methods to problems in high-energy physics and cosmology.</p>
+</div>
 </main>
+
+
+<footer class="site-footer">Open to research internships & collaborations · IISER TVM · BS Data Science (IIT Madras)</footer>
 </body>
 </html>
-

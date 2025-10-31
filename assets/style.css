@@ -1,0 +1,251 @@
+/* assets/style.css — cleaned, conflict-free, professional styling */
+
+/* Base libraries */
+@import url("https://unpkg.com/@picocss/pico@latest/css/pico.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+/* ---------------- variables ---------------- */
+:root{
+  --header-h: 68px;           /* header height */
+  --bg: #050507;              /* near-black */
+  --panel: #070709;
+  --text: #eef2f6;
+  --muted: #9aa6b2;
+  --accent: #56c6e8;
+  --card-radius: 14px;
+  --maxw: 1100px;
+}
+
+/* ---------------- reset / base ---------------- */
+*{box-sizing:border-box}
+
+html {
+  height: 100%;
+  background: #000;             
+}
+html,body{height:100%}
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding-top: var(--header-h);     /* keep header spacing */
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--text);
+
+  /* primary background: subtle anchored gradient on top of a black base */
+  background-color: #000;
+  background-image: linear-gradient(180deg, var(--bg) 0%, #07080a 100%);
+  background-attachment: fixed;     /* makes the background stay put while scrolling */
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------- header ---------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  background: rgba(5,5,7,0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  z-index: 60;
+}
+
+.header-content{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.6rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  color:var(--text);
+  font-weight:600;
+  font-size:1.05rem;
+  text-decoration:none;
+  letter-spacing:0.02em;
+}
+
+.logo:hover{ color:var(--accent); transition: color .18s ease; }
+
+nav .nav-link {
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:500;
+  margin-left:1rem;
+}
+nav .nav-link:hover{ color:var(--accent); transition: color .18s ease; }
+
+/* ---------------- main (home) ---------------- */
+/* main container sits under header (body padding-top already applied) */
+main.container{
+  max-width: var(--maxw);
+  margin: calc(var(--header-h) + 3vh) auto 2.5rem; /* keeps good top spacing */
+  padding: 2rem;
+  display:flex;
+  align-items:center;           /* vertical centering of columns */
+  gap: 3rem;
+  background: rgba(255,255,255,0.01);
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+/* left column (profile image + icons) */
+.profile{
+  min-width: 220px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;          /* centers image + icons horizontally in the column */
+  gap: .8rem;
+  padding: .4rem;
+  text-align:center;
+}
+
+/* profile image: desktop default and responsive scaling */
+.profile-img{
+  width: 300px;
+  height: 300px;
+  border-radius: 16px;
+  object-fit: cover;
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  display:block;
+  max-width:100%;
+}
+
+/* icons row */
+.icons{
+  display:flex;
+  gap:.8rem;
+  margin-top:.45rem;
+}
+.icons a{
+  width:44px;
+  height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,0.06);
+  color:var(--text);
+  background: rgba(255,255,255,0.01);
+  box-shadow: 0 6px 16px rgba(2,6,23,0.45);
+  transition: transform .12s ease, background .12s ease, color .12s ease;
+}
+.icons a:hover{
+  transform: translateY(-3px);
+  background: rgba(86,198,232,0.08);
+  color:var(--accent);
+  box-shadow: 0 12px 30px rgba(6,182,212,0.06);
+}
+/* ---------- Homepage background image ---------- */
+/* homepage background */
+body.home {
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.88)),
+    url("assets/bg.jpg") center center / cover no-repeat fixed;
+}
+
+/* right column (intro text) */
+.intro{
+  flex:1;
+  padding-right:.6rem;
+}
+.intro h1{
+  margin:0 0 .35rem 0;
+  font-size:2.2rem;
+  line-height:1.02;
+  font-weight:700;
+  letter-spacing:-0.02em;
+  color:var(--text);
+}
+.blurb{
+  margin-top:.7rem;
+  color:var(--muted);
+  font-weight:400;
+  font-size:1.03rem;
+  line-height:1.62;
+  max-width:70ch;
+}
+
+/* ---------------- about page ---------------- */
+main.page{
+  max-width: var(--maxw);
+  margin: 1.6rem auto 3.2rem;
+  padding: 2rem;
+  background: rgba(255,255,255,0.01);
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(2,6,23,0.55);
+}
+
+/* article/card style for each experience block */
+main.page article{
+  background: rgba(255,255,255,0.02);
+  margin: 0 0 1.6rem 0;
+  padding: 1.2rem 1.4rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+}
+main.page article h3{ margin:0 0 .35rem 0; font-size:1.12rem; color:var(--text) }
+main.page article p{ color:var(--muted); margin: .35rem 0; line-height:1.6; }
+
+/* back link and cv button */
+.back{ color:var(--muted); text-decoration:none; display:inline-block; margin-bottom:1rem; }
+.cv-btn{ display:inline-block; padding:.6rem 1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.06); color:var(--text); text-decoration:none; background:transparent; }
+
+/* page footer */
+.page-footer{ margin-top:2rem; color:var(--muted); font-size:.95rem; }
+
+/* site footer under everything */
+.site-footer{
+  max-width:var(--maxw);
+  margin:2rem auto 6vh;
+  color:var(--muted);
+  text-align:center;
+  font-size:.95rem;
+  padding:0 1rem;
+}
+
+
+/* ---------------- responsive ---------------- */
+@media (max-width: 1000px){
+  main.container{
+    gap:2rem;
+    padding:1.6rem;
+  }
+  .profile-img{ width:240px; height:240px; }
+  .intro h1{ font-size:1.9rem; text-align:left; }
+  .blurb{ max-width:60ch; }
+}
+
+@media (max-width: 720px){
+  /* stack columns on small screens */
+  main.container{
+    flex-direction:column;
+    align-items:center;
+    padding:1.2rem;
+    margin: calc(var(--header-h) + 2vh) 1rem 2rem;
+  }
+  .profile{ flex-direction:column; align-items:center; text-align:center; }
+  .profile-img{ width:160px; height:160px; border-radius:12px; }
+  .icons a{ width:40px; height:40px; }
+  .intro{ padding:0; }
+  .intro h1{ font-size:1.6rem; text-align:center; }
+  .blurb{ max-width:48ch; font-size:0.98rem; line-height:1.6; }
+  main.page{ margin:1rem; padding:1.2rem; }
+}
+@media (max-width: 400px){
+  .profile-img{ width:140px; height:140px; }
+  .icons a{ width:36px; height:36px; }
+  .intro h1{ font-size:1.4rem; }
+}

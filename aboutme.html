@@ -1,61 +1,110 @@
-
-<!-- about.html -->
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About — Garvit Sonawala</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Garvit Sonawala</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<main style="max-width:820px;margin:6vh auto;font-family:system-ui,Arial,Helvetica,sans-serif;line-height:1.5;padding:24px">
-<a href="/" style="display:inline-block;margin-bottom:18px;text-decoration:none;color:inherit">← Home</a>
-<h1 style="margin-top:0">About</h1>
+<body style="
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3') 
+    center center / cover repeat fixed;
+    background-repeat: repeat-y;
+  color: #e6eef6;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+">
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">Garvit Sonawala</a>
+      <nav>
+        <a href="about.html" class="nav-link" style="color: var(--accent);">About</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="page">
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>BS–MS (Integrated) in Physics</strong> — IISER Thiruvananthapuram (2022–2027)</li>
+        <li><strong>BS in Data Science</strong> — IIT Madras (2023–Present, concurrent)</li>
+      </ul>
+    </section>
 
-<section>
-<h2>Education</h2>
-<ul>
-<li>Master’s in Physics — IISER Thiruvananthapuram (current)</li>
-<li>BS Data Science (course) — IIT Madras (concurrently)</li>
-</ul>
-</section>
+    <section>
+      <h2>Research Experience</h2>
 
+      <article>
+        <h3>Student Intern — Tata Institute of Fundamental Research (TIFR), Mumbai</h3>
+        <p><em>May 2025 – Present</em></p>
+        <p>
+          Working under <strong>Dr. Achamveedu Gopakumar</strong> on gravitational-wave modeling for circular
+          supermassive black-hole binaries using 12-year PTA residual data (0PN–2PN).
+          Implementing and comparing <strong>CNN, RNN, and Bayesian Neural Networks</strong> for waveform classification
+          and chirp-mass estimation at low signal-to-noise ratios.
+        </p>
+      </article>
 
-<section>
-<h2>Projects</h2>
-<article>
-<h3>Boltzmann Solver for CMB perturbations</h3>
-<p>Numerical solver for linear photon-baryon perturbations; visualizes temperature anisotropies and transfer functions. <strong>Tools:</strong> Python, NumPy.</p>
-</article>
+      <article>
+        <h3>Student Intern — IIT Guwahati</h3>
+        <p><em>July 2024 – September 2024</em></p>
+        <p>
+          Under the guidance of <strong>Dr. Subhaditya Bhattacharya</strong>, modeled the time evolution of the dark-matter relic
+          density using the Boltzmann equation. Explored astrophysical and cosmological evidence to compare
+          theoretical predictions with observations, deepening my understanding of early-Universe dynamics.
+        </p>
+      </article>
+    </section>
 
+    <section>
+        <h2>Presentations</h2>
+    <article
+      
+      <p>
+        <a href="assets/DM poster presentation.pdf">“Exploring Dark Matter Freeze-Out”</a> — Presented a poster at <em>ANVESHA 2024, IISER Thiruvananthapuram</em>,
+        summarizing my IITG internship work. The presentation highlighted the cosmological significance of dark matter,
+        freeze-out behavior, and links between theoretical and observational constraints.
+      </p>
+    </article>
+    </section>
 
-<article>
-<h3>Data-driven anomaly detection in particle events</h3>
-<p>Applied unsupervised learning to simulated collision data to find rare events. <strong>Tools:</strong> Scikit-learn, PyTorch.</p>
-</article>
+    <section>
+      <h2>Technical Skills</h2>
+      <article
+      <ul>
+        <li><strong>Programming:</strong> Python, Java, SQL</li>
+        <li><strong>Libraries & Tools:</strong> NumPy, Pandas, Matplotlib, PyTorch, scikit-learn, Jupyter, Git, LaTeX</li>
+        <li><strong>Machine Learning:</strong> CNNs, RNNs, Bayesian Neural Networks, supervised & unsupervised learning</li>
+        <li><strong>Database / Web:</strong> MySQL, PostgreSQL, Flask, SQLAlchemy</li>
+      </ul>
+        </article>
+    </section>
 
+    <section>
+      <h2>Volunteering & Leadership</h2>
+      <article>
+      <p>
+        I currently serve as a <strong>Core Committee Member</strong> of the <em>PSIT Physics Society</em> at IISER Thiruvananthapuram,
+        helping manage sponsorships, event logistics, and outreach activities for the department.
+        I enjoy working in teams that bring together ideas from different areas of physics, technology, and communication.
+      </p>
+        </article>
+    </section>
 
-<article>
-<h3>N-body toy simulation (course project)</h3>
-<p>Built an N-body integrator with visualization and simple scaling tests. <strong>Tools:</strong> Python.</p>
-</article>
+    <section>
+      <p><a href="/assets/Garvit_CV.pdf" download class="cv-btn">Download CV</a></p>
+    </section>
 
+    <footer class="page-footer">
+      Contact: <a href="mailto:garvit22@iisertvm.ac.in">garvit22@iisertvm.ac.in</a> ·
+      <a href="https://www.linkedin.com/in/garvit-sonawala-1b9339208/" target="_blank">LinkedIn</a>
+    </footer>
+  </main>
 
-<!-- Add more project entries as you like -->
-</section>
-
-
-<section>
-<h2>Other</h2>
-<p>I enjoy bridging theory and computation — deriving intuition from analytic work, then testing ideas numerically. Currently looking for research internships in theoretical or computational cosmology and astroparticle physics.</p>
-
-
-<p><a href="/files/Garvit_Sonawala_CV.pdf" download style="padding:8px 12px;border:1px solid #888;border-radius:8px;text-decoration:none">Download CV</a></p>
-</section>
-
-
-<footer style="margin-top:36px;color:#666;font-size:13px">Contact: <a href="mailto:your.email@domain.com">your.email@domain.com</a></footer>
-</main>
+  <footer class="site-footer">
+    Open to research internships & collaborations · IISER TVM · BS Data Science (IIT Madras)
+  </footer>
 </body>
 </html>
