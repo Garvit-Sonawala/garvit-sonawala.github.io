@@ -60,6 +60,7 @@ a:hover{ color: #ffffff; }
   top: 3rem;
   align-self: start;
   height: fit-content;
+  min-width: 0;
 }
 .rail-name{
   font-family: "Newsreader", serif;
@@ -131,27 +132,15 @@ a:hover{ color: #ffffff; }
   .rail-nav{ flex-direction: row; flex-wrap: wrap; column-gap: 1.4rem; row-gap: 0.5rem; }
 }
 
-/* ---------------- intro ---------------- */
-.intro-row{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2.5rem;
-  margin-bottom: 5rem;
-}
-.name{
-  font-size: 3rem;
-  line-height: 1.06;
-  color: var(--text);
-}
-.intro-photo{
-  width: 190px;
-  height: 240px;
-  flex-shrink: 0;
+/* ---------------- rail photo ---------------- */
+.rail-photo{
+  width: 100%;
+  height: 300px;
   overflow: hidden;
   border: 1px solid var(--border);
+  margin-bottom: 1.6rem;
 }
-.intro-photo img{
+.rail-photo img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -160,9 +149,7 @@ a:hover{ color: #ffffff; }
 }
 
 @media (max-width: 860px){
-  .intro-row{ flex-direction: column-reverse; gap: 1.6rem; }
-  .intro-photo{ width: 140px; height: 180px; }
-  .name{ font-size: 2.4rem; }
+  .rail-photo{ width: 160px; height: 200px; }
 }
 
 /* ---------------- sections ---------------- */
