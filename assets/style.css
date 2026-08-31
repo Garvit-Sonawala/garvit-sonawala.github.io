@@ -144,13 +144,6 @@ a:hover{ color: #ffffff; }
   line-height: 1.06;
   color: var(--text);
 }
-.intro-bio{
-  margin: 1.1rem 0 0 0;
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.68;
-  max-width: 54ch;
-}
 .intro-photo{
   width: 190px;
   height: 240px;
