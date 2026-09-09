@@ -383,6 +383,21 @@ a:hover{ color: #ffffff; }
 }
 .cta:hover svg{ stroke: #08090b; }
 
+.also-built-label{
+  margin: 2.4rem 0 0.6rem 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.also-built{
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  max-width: 60ch;
+}
+
 /* ---------------- skills ---------------- */
 .skills-grid{
   border-top: 1px solid var(--border-soft);
