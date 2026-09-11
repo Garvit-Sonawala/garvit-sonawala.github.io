@@ -192,6 +192,23 @@ a:hover{ color: #ffffff; }
 }
 
 /* ---------------- about ---------------- */
+.about-page{
+  max-width: 62ch;
+  padding-top: 1.5rem;
+}
+.about-lede{
+  font-family: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--text);
+  margin: 0 0 2rem 0;
+}
+.about-rule{
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 0 0 2rem 0;
+}
 .about-body p{
   margin: 0 0 1.1rem 0;
   color: var(--muted);
