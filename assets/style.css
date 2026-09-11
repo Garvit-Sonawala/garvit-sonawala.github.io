@@ -83,6 +83,12 @@ a:hover{ color: #ffffff; }
   font-size: 0.86rem;
   color: var(--muted);
 }
+.rail-availability{
+  margin: 0 0 1.4rem 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
 .rail-social{
   display: flex;
   gap: 0.6rem;
@@ -116,9 +122,15 @@ a:hover{ color: #ffffff; }
   display: block;
   transition: color .15s ease, padding-left .15s ease;
 }
-.rail-link:hover{
+.rail-link:not(.is-active):hover{
   color: var(--text);
   padding-left: 4px;
+}
+.rail-link.is-active{
+  color: var(--accent);
+}
+.rail-link.is-active .rail-num{
+  color: var(--accent);
 }
 .rail-num{
   color: var(--muted-2);
@@ -397,44 +409,3 @@ a:hover{ color: #ffffff; }
   line-height: 1.65;
   max-width: 60ch;
 }
-
-/* ---------------- skills ---------------- */
-.skills-grid{
-  border-top: 1px solid var(--border-soft);
-  padding-top: 1.6rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.8rem 3rem;
-}
-.skill-label{
-  margin: 0 0 0.55rem 0;
-  color: var(--muted-2);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.skill-list{
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.85;
-}
-
-@media (max-width: 860px){
-  .skills-grid{ grid-template-columns: 1fr; }
-}
-
-/* ---------------- contact ---------------- */
-.contact-heading{
-  font-size: 1.4rem;
-  color: var(--text);
-  max-width: 26ch;
-  line-height: 1.35;
-  font-weight: 500;
-}
-.contact-links{
-  margin: 0.9rem 0 0 0;
-  color: var(--muted-2);
-  font-size: 0.88rem;
-}
-.contact-links a{ border-bottom: 1px solid rgba(255,255,255,0.2); }

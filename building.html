@@ -1,0 +1,106 @@
+<!-- building.html -->
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZ7GTJC9Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PYZ7GTJC9Z');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Building &ndash; Garvit Sonawala</title>
+<meta name="description" content="Software built by Garvit Sonawala, including MindSort, a personal-assistant PWA, and CodeLore, a Claude Code documentation skill.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- RAIL -->
+  <aside class="rail">
+    <a href="index.html" class="rail-name">Garvit Sonawala</a>
+    <p class="rail-tagline mono">Physics &middot; Data Science</p>
+
+    <div class="rail-photo">
+      <img src="assets/profile.jpg" alt="Garvit Sonawala">
+    </div>
+
+    <div class="rail-facts">
+      <span>IISER Thiruvananthapuram</span>
+      <span>BS Data Science, IIT Madras</span>
+    </div>
+
+    <p class="rail-availability">Open to research internships and collaborations.</p>
+
+    <div class="rail-social">
+      <a href="mailto:garvit22@iisertvm.ac.in" aria-label="Email" class="icon-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6.5v11c0 .8.7 1.5 1.5 1.5h15c.8 0 1.5-.7 1.5-1.5v-11c0-.8-.7-1.5-1.5-1.5h-15C3.7 5 3 5.7 3 6.5zM21 6.5l-9 6-9-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/garvit-sonawala-1b9339208/" target="_blank" aria-label="LinkedIn" class="icon-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5a2.5 2.5 0 11-.002 4.999A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM13 9h3.6v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.5V21h-4v-5.2c0-1.2 0-2.6-1.6-2.6-1.6 0-1.8 1.2-1.8 2.5V21h-4z" fill="currentColor"/></svg>
+      </a>
+      <a href="assets/Garvit_CV_.pdf" download aria-label="Download CV" class="icon-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 2v6h6M12 18v-6m0 6l-2.5-2.5M12 18l2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <nav class="rail-nav">
+      <a href="index.html" class="rail-link"><span class="mono rail-num">01</span>About</a>
+      <a href="research.html" class="rail-link"><span class="mono rail-num">02</span>Research</a>
+      <a href="building.html" class="rail-link is-active"><span class="mono rail-num">03</span>Building</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main id="top">
+
+    <!-- BUILDING -->
+    <section id="building" class="section">
+      <div class="section-head">
+        <span class="mono section-num">03</span>
+        <h2 class="section-title">Building</h2>
+      </div>
+      <div class="section-body">
+        <p class="building-lead">
+          I like automating things that are repetitive and don't really need a human's judgement, usually with some machine learning or computation doing the actual thinking. Model a system well enough and you don't have to do the boring part by hand anymore. Physics, basically, pointed somewhere else.
+        </p>
+
+        <h3 class="project-title">MindSort</h3>
+        <p class="project-sub mono">Voice &amp; text personal-assistant PWA</p>
+
+        <p class="project-desc">
+          MindSort is a Progressive Web App I designed and built end to end. You "dump" whatever's on your mind, typed or spoken, in English, Hindi, or a mix of both, and it works out what you actually meant: a new task, something you've finished, a reason to reshape today's plan, or just you thinking out loud. Nothing gets written until you confirm it. Every morning it puts together a short, reasoned daily briefing from your real open tasks and behavioural signals it's picked up over time, things like which projects have gone quiet or which ones keep losing their slot, instead of just sorting everything by due date.
+        </p>
+        <p class="project-desc">
+          Under the hood it's a React PWA on Supabase Postgres, with row-level security on every table, voice transcription through Deepgram, and both AI providers called through server-side proxy functions so no API key ever reaches the browser. The model proposes changes, but a deterministic layer in the code re-verifies anything that actually matters, so it can't silently invent a due date or a finished task.
+        </p>
+
+        <div class="tech-tags">
+          <span class="tag mono">React</span>
+          <span class="tag mono">Supabase / Postgres</span>
+          <span class="tag mono">Gemini</span>
+          <span class="tag mono">Deepgram</span>
+          <span class="tag mono">PWA</span>
+        </div>
+
+        <a href="https://mind-sort-eight.vercel.app/" target="_blank" class="cta mono">
+          Try it live
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <p class="also-built-label mono">Also built</p>
+        <p class="also-built">
+          <a href="https://github.com/Garvit-Sonawala/CodeLore" target="_blank">CodeLore</a>, a Claude Code skill that reconstructs a project's documentation, LaTeX writeup, README, decision log, architecture diagrams, straight from its git history and source, so the docs stay honest instead of drifting out of date.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

@@ -14,7 +14,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Garvit Sonawala</title>
-<meta name="description" content="Garvit Sonawala, Physics and Data Science. Research in particle phenomenology, and MindSort, a personal-assistant PWA.">
+<meta name="description" content="Garvit Sonawala. Physics and Data Science, IISER Thiruvananthapuram and IIT Madras.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
 
   <!-- RAIL -->
   <aside class="rail">
-    <a href="#top" class="rail-name">Garvit Sonawala</a>
+    <a href="index.html" class="rail-name">Garvit Sonawala</a>
     <p class="rail-tagline mono">Physics &middot; Data Science</p>
 
     <div class="rail-photo">
@@ -34,6 +34,8 @@
       <span>IISER Thiruvananthapuram</span>
       <span>BS Data Science, IIT Madras</span>
     </div>
+
+    <p class="rail-availability">Open to research internships and collaborations.</p>
 
     <div class="rail-social">
       <a href="mailto:garvit22@iisertvm.ac.in" aria-label="Email" class="icon-btn">
@@ -48,11 +50,9 @@
     </div>
 
     <nav class="rail-nav">
-      <a href="#about" class="rail-link"><span class="mono rail-num">01</span>About</a>
-      <a href="#research" class="rail-link"><span class="mono rail-num">02</span>Research</a>
-      <a href="#building" class="rail-link"><span class="mono rail-num">03</span>Building</a>
-      <a href="#skills" class="rail-link"><span class="mono rail-num">04</span>Skills</a>
-      <a href="#contact" class="rail-link"><span class="mono rail-num">05</span>Contact</a>
+      <a href="index.html" class="rail-link is-active"><span class="mono rail-num">01</span>About</a>
+      <a href="research.html" class="rail-link"><span class="mono rail-num">02</span>Research</a>
+      <a href="building.html" class="rail-link"><span class="mono rail-num">03</span>Building</a>
     </nav>
   </aside>
 
@@ -78,214 +78,7 @@
       </div>
     </section>
 
-    <!-- RESEARCH -->
-    <section id="research" class="section">
-      <div class="section-head tight">
-        <span class="mono section-num">02</span>
-        <h2 class="section-title">Research</h2>
-      </div>
-      <p class="mono section-credentials">BS&ndash;MS Physics, IISER TVM (2022&ndash;2027) &middot; BS Data Science, IIT Madras (2023&ndash;present) &middot; GATE (Physics), 2026</p>
-
-      <div class="entry-list">
-        <div class="entry">
-          <div class="entry-date mono">MAY 2026 &ndash; NOW</div>
-          <div>
-            <div class="entry-title-row">
-              <h3><button type="button" class="entry-trigger" aria-expanded="false" aria-controls="more-thesis">
-                <span class="entry-title">Master's Thesis, IIT Gandhinagar</span>
-                <span class="entry-toggle mono" aria-hidden="true">+</span>
-              </button></h3>
-              <span class="now-tag mono">Now</span>
-            </div>
-            <p class="entry-sub">Supervisor: Dr. Rusa Mandal</p>
-            <p class="entry-desc">
-              Computing the rare decay B &rarr; K*&#8467;&#8314;&#8467;&#8315; from first principles: matching the one-loop Standard Model amplitude onto the effective weak Hamiltonian, then comparing the result with LHCb data to bound new-physics contributions to the underlying Wilson coefficients. Started as an SRIP fellowship at IIT Gandhinagar, May to July 2026.
-            </p>
-            <div class="entry-more" id="more-thesis">
-              <div class="entry-more-inner">
-                <div class="entry-stat">
-                  <span class="entry-stat-value mono">~4&sigma;</span>
-                  <span class="entry-stat-label mono">reported tension in global fits, even after RK/RK* resolved</span>
-                </div>
-                <p>The Standard Model has one obvious gap: it gives no reason for why the three generations of fermions have such different masses and mixing patterns, something people call the flavour puzzle. Rare decays are one of the few places you can actually go looking for an answer to that, because a transition like b &rarr; s&#8467;+&#8467;&minus; is forbidden at tree level, loop-suppressed, and further suppressed by an almost-exact cancellation (the GIM mechanism) that only fails because the top quark is so much heavier than the up and charm quarks. A process that suppressed is unusually sensitive: even a small new particle contributing inside the loop can shift the result by a measurable amount, in a way a tree-level process never would.</p>
-                <p>B &rarr; K*&#8467;+&#8467;&minus; is exactly this kind of decay, and one particular observable built from it, P5&prime;, has sat in mild but genuine tension with the Standard Model prediction for years, in the most recent LHCb dataset as much as the earlier ones, even after two more dramatic anomalies nearby, RK and RK*, turned out to resolve back to the Standard Model once the 2022 measurement improved its treatment of backgrounds. Whether the remaining gap is new physics or just an underestimated hadronic effect is still an open, actively debated question, and that's the gap my thesis, under Dr. Rusa Mandal at IIT Gandhinagar, is trying to compute cleanly enough to actually say something about.</p>
-                <p>The approach is to build the calculation from the ground up rather than start from a published result: draw the Feynman diagrams for the underlying quark-level transition, work through the loop integrals, and match the result onto an effective Hamiltonian, the standard way of separating the short-distance physics you can compute perturbatively from the long-distance, non-perturbative physics of how quarks are actually bound inside real B and K* mesons, which has to come from lattice QCD or light-cone sum rules instead. What falls out of the matching are two numbers called Wilson coefficients, and whether there's new physics hiding in this decay comes down to whether those numbers agree with the Standard Model or not.</p>
-                <p>I'm building it as a reusable computational pipeline rather than a one-off derivation, using Mathematica's FeynArts, FeynCalc and Package-X to generate the diagrams and reduce the loop integrals symbolically, so the same machinery can eventually be pointed at a different new-physics model, or a different rare decay entirely, without redoing the calculation by hand each time.</p>
-                <p>It's early, unpublished work, so I'm leaving the actual results out of this for now. But the shape of the question, given a theory, what does it actually predict, and does that number survive contact with real data, is the same one that's carried me through freeze-out and gravitational waves before this.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-date mono">JAN &ndash; MAY 2026</div>
-          <div>
-            <h3><button type="button" class="entry-trigger" aria-expanded="false" aria-controls="more-borophene">
-              <span class="entry-title">Minor Project, Computational Chemistry</span>
-              <span class="entry-toggle mono" aria-hidden="true">+</span>
-            </button></h3>
-            <p class="entry-sub">IISER Thiruvananthapuram &middot; Supervisor: Dr. R. S. Swathi</p>
-            <p class="entry-desc">
-              Used particle-swarm optimisation, benchmarked first on the classical Lennard-Jones cluster problem, to find global-minimum structures of (B12)n borophene nanoclusters (n = 2 to 10), treating each 12-atom monomer as a rigid body to cut the search space from 36n down to 6(n&minus;1) dimensions. Pairing a ring communication topology with L-BFGS-B local refinement got the swarm to 100% success up to n = 8, well past where a plain swarm had already collapsed. Comparing the full potential against a version without its antiaromatic correction isolated that term's contribution at 10&ndash;20 kJ/mol, and the results picked out n = 6 as an anomalously stable "magic number" cluster, matching an independent reference calculation.
-            </p>
-            <div class="entry-more" id="more-borophene">
-              <div class="entry-more-inner">
-                <div class="entry-stat">
-                  <span class="entry-stat-value mono">100%</span>
-                  <span class="entry-stat-label mono">success rate up to n = 8, with local refinement added</span>
-                </div>
-                <p>Most of my research lives in particle physics, but this one was a detour into computational chemistry, and it's turned out to be one of the more satisfying pieces of code I've written. The question was simple to state and hard to solve: boron atoms form a twelve-atom cluster called B12, a buckled, nearly hexagonal fragment of borophene, and when several B12 units come together into a larger (B12)n cluster, what's the actual lowest-energy arrangement, for n anywhere from 2 to 10?</p>
-                <p>You can't just minimise your way there with gradient descent, because the energy landscape has a huge number of local minima and a gradient optimiser just falls into whichever one it starts closest to. I used particle swarm optimisation instead, a population of candidate structures that explore the space together and share information about the best position anyone's found, and validated it first on the classical Lennard-Jones cluster problem, where the true global-minimum energies are already published, before trusting it on the real system. That benchmarking step mattered: a plain swarm using a fully connected ("star") communication topology converged fast but collapsed to a 0% success rate by cluster size 6, while a slower, locally connected ("ring") topology held up a bit longer but still failed by the same point. Adding a local optimiser, L-BFGS-B, after every swarm iteration changed the picture completely, pushing the success rate to 100% up to size 8 and holding on partially as far as 15.</p>
-                <p>The physical part of the problem is that B12 isn't a normal van der Waals cluster. It's a 4&pi;-electron system, so by the H&uuml;ckel rule it's antiaromatic, and stacking two antiaromatic rings face to face carries a real energy penalty that a standard dispersion potential simply doesn't know about. I used an improved Lennard-Jones potential with an explicit orientation-dependent antiaromatic correction on top, and ran the whole thing twice, once with the correction and once without, specifically to isolate its effect. That correction turns out to be worth 10 to 20 kJ/mol, large enough to rule out the face-to-face stacked geometries a plain dispersion model would otherwise favour as the global minimum.</p>
-                <p>Treating each 12-atom monomer as a rigid body, rather than optimising all 36 atomic coordinates per monomer independently, cut the search space for a ten-monomer cluster from 360 dimensions down to 54, which is what actually made the larger cluster sizes tractable on the HPC cluster at IISER. The results matched an independent evolutionary-algorithm reference closely for the smaller clusters, and picked out n = 6 as a genuine magic-number cluster, meaning it's anomalously stable compared to its neighbours, a result all three methods agreed on independently.</p>
-                <p>It's a long way from Wilson coefficients, but the actual instinct behind it, validate your method on a known problem before trusting it on a new one, and don't add a physical correction you can't independently justify by turning it off and comparing, is exactly the same one I bring to the physics.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-date mono">MAY &ndash; JUL 2025</div>
-          <div>
-            <h3><button type="button" class="entry-trigger" aria-expanded="false" aria-controls="more-tifr">
-              <span class="entry-title">Student Intern, TIFR Mumbai</span>
-              <span class="entry-toggle mono" aria-hidden="true">+</span>
-            </button></h3>
-            <p class="entry-sub">Supervisor: Dr. Achamveedu Gopakumar</p>
-            <p class="entry-desc">
-              Simulated twelve years of pulsar-timing-array residuals for circular supermassive black-hole binaries at 0PN and 2PN order, using real timing data from three pulsars with injected Gaussian noise. Built a 1D CNN to tell genuine signal from noise, which held around 98% accuracy at high signal-to-noise and degraded gracefully as it dropped, and an Elman RNN to regress chirp mass directly from the residuals, getting mean relative error down to around 2.5% at high SNR. Bayesian neural networks added calibrated uncertainty on top of those estimates.
-            </p>
-            <div class="entry-more" id="more-tifr">
-              <div class="entry-more-inner">
-                <div class="entry-stat">
-                  <span class="entry-stat-value mono">2.4%</span>
-                  <span class="entry-stat-label mono">mean chirp-mass error at high signal-to-noise</span>
-                </div>
-                <p>Pulsar timing arrays are one of the strangest gravitational-wave detectors around: instead of an interferometer, you use millisecond pulsars themselves as cosmic clocks, spread across the galaxy, and watch for a correlated deviation in their arrival times, called a timing residual, that a slowly varying gravitational wave from a supermassive black-hole binary would leave behind. The signal you're looking for sits well below the noise floor for a huge fraction of realistic sources, which is what made this a machine learning problem as much as a physics one.</p>
-                <p>I started by simulating twelve years of timing residuals for three real millisecond pulsars, J1909&minus;3744, J1713+0747 and J0437&minus;4715, injected with realistic Gaussian timing noise, using the 0PN quadrupole-radiation waveform for a circular supermassive black-hole binary, later extended to 2PN, which adds relativistic corrections the Newtonian approximation misses. That gave me a controlled dataset where I actually knew the true chirp mass and could dial the signal-to-noise ratio up and down to see where each method broke.</p>
-                <p>The first model is a 1D convolutional network that just answers one question: is there a genuine signal buried in this residual, or is it noise. It's a fairly standard architecture, three convolution-batchnorm-ReLU-pooling blocks feeding into a dense classifier, but tuning it against a synthetic dataset where you control the SNR directly is what let me actually characterise its failure mode properly: close to 98% accuracy once the SNR is around 18, degrading smoothly down to about 65% by SNR 1, rather than a hard, misleading cliff.</p>
-                <p>The second model is a small Elman recurrent network trained to regress the chirp mass directly from the residual sequence, using mean relative error rather than raw MSE as the metric that actually matters physically. That one goes from roughly 11% error at SNR 4.5 down to about 2.4% at SNR 20, which is the kind of curve you want: useful even in a fairly noisy regime, and genuinely precise once the signal is clean. A Bayesian version of the same estimator adds calibrated uncertainty on top, so a low-confidence chirp-mass estimate actually reads as low-confidence instead of a silently wrong number.</p>
-                <p>None of this replaces a real PTA pipeline, obviously, real detections come from correlating dozens of pulsars over decades, not three over twelve years. But it was a genuine, hands-on introduction to why the field is leaning so heavily on machine learning right now: PTA datasets are large, the signals are weak and drowned in red noise, and a well-characterised neural estimator is often faster and more honest about its own uncertainty than a brute-force matched-filter search over an enormous parameter space.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-date mono">JUL &ndash; SEP 2024</div>
-          <div>
-            <h3><button type="button" class="entry-trigger" aria-expanded="false" aria-controls="more-freezeout">
-              <span class="entry-title">Research Intern, IIT Guwahati</span>
-              <span class="entry-toggle mono" aria-hidden="true">+</span>
-            </button></h3>
-            <p class="entry-sub">Supervisor: Dr. Subhaditya Bhattacharya</p>
-            <p class="entry-desc">
-              Started from the observational case for dark matter (rotation curves, gravitational lensing, the Bullet Cluster, CMB anisotropies), then derived the relic-abundance equation from first principles: the Boltzmann equation on an FLRW background, reduced from Liouville's theorem down to the standard yield equation that governs thermal freeze-out in the radiation-dominated epoch.
-            </p>
-            <div class="entry-more" id="more-freezeout">
-              <div class="entry-more-inner">
-                <p>Dark matter makes up about 85% of the matter in the universe, and we've never directly detected a single particle of it. Almost everything we know comes from its gravitational footprint: galaxy rotation curves that stay flat far beyond where the visible matter runs out, gravitational lensing around galaxy clusters, the way the hot gas and the mass visibly separated in the Bullet Cluster after two clusters collided, and the specific pattern of anisotropies in the cosmic microwave background, which only comes out right if you include a cold dark matter component in the model. None of these tell you what dark matter actually is, but together they pin down how much of it there has to be, and that number is called the relic abundance.</p>
-                <p>This project was about deriving where that number comes from, from first principles, rather than quoting it. The starting point is the Boltzmann equation, which describes how the phase space distribution of a particle species evolves in time, but this isn't a fixed background: you have to build it on an expanding FLRW spacetime, work out the relevant Christoffel symbols for that metric, and substitute them back into Liouville's equation before it says anything useful about number density. That gives an equation for how a particle species's number density changes under two competing effects: dilution from the expansion of the universe, and creation or destruction through actual particle interactions, the annihilation and production processes captured in the collision term.</p>
-                <p>The physically useful move is to stop tracking the number density itself and instead track the comoving number density, or yield, Y = n/s, where s is the entropy density, because that quantity stays flat except when something is actually happening. In the radiation-dominated era, converting the time variable to x = m/T, where T is the temperature, gives a single differential equation for how Y evolves, and it has a clean interpretation once you get there: while the annihilation rate is much faster than the Hubble expansion rate, Y tracks its equilibrium value closely; once the universe expands and cools enough that the interaction rate drops below the expansion rate, the species decouples, or freezes out, and Y flattens out at whatever value it had at that moment. That frozen-in value is the relic abundance.</p>
-                <p>It's a satisfying derivation because every approximation in it is motivated by something physical rather than just algebraic convenience, and because the same freeze-out logic, tune the annihilation cross-section and you shift where and how much freezes out, is the whole reason weakly interacting massive particles became such a popular dark matter candidate in the first place: get the cross-section roughly at the weak scale, and the freeze-out calculation spits out almost exactly the observed dark matter density, unprompted. I presented this work as a poster at ANVESHA 2024.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="presentations-label mono">Presentations</p>
-      <div class="presentations-list">
-        <p>&ldquo;<a href="assets/Rare%20Decay%20poster%20presentation.pdf">Rare Decay B &rarr; K*&#8467;&#8314;&#8467;&#8315;: From Effective Field Theory to New Physics</a>,&rdquo; poster presented at SRIP 2026, IIT Gandhinagar.</p>
-        <p>&ldquo;<a href="assets/DM%20poster%20presentation.pdf">Exploring Dark Matter Freeze-Out</a>,&rdquo; poster presented at ANVESHA 2024, IISER Thiruvananthapuram.</p>
-      </div>
-    </section>
-
-    <!-- BUILDING -->
-    <section id="building" class="section">
-      <div class="section-head">
-        <span class="mono section-num">03</span>
-        <h2 class="section-title">Building</h2>
-      </div>
-      <div class="section-body">
-        <p class="building-lead">
-          I like automating things that are repetitive and don't really need a human's judgement, usually with some machine learning or computation doing the actual thinking. Model a system well enough and you don't have to do the boring part by hand anymore. Physics, basically, pointed somewhere else.
-        </p>
-
-        <h3 class="project-title">MindSort</h3>
-        <p class="project-sub mono">Voice &amp; text personal-assistant PWA</p>
-
-        <p class="project-desc">
-          MindSort is a Progressive Web App I designed and built end to end. You "dump" whatever's on your mind, typed or spoken, in English, Hindi, or a mix of both, and it works out what you actually meant: a new task, something you've finished, a reason to reshape today's plan, or just you thinking out loud. Nothing gets written until you confirm it. Every morning it puts together a short, reasoned daily briefing from your real open tasks and behavioural signals it's picked up over time, things like which projects have gone quiet or which ones keep losing their slot, instead of just sorting everything by due date.
-        </p>
-        <p class="project-desc">
-          Under the hood it's a React PWA on Supabase Postgres, with row-level security on every table, voice transcription through Deepgram, and both AI providers called through server-side proxy functions so no API key ever reaches the browser. The model proposes changes, but a deterministic layer in the code re-verifies anything that actually matters, so it can't silently invent a due date or a finished task.
-        </p>
-
-        <div class="tech-tags">
-          <span class="tag mono">React</span>
-          <span class="tag mono">Supabase / Postgres</span>
-          <span class="tag mono">Gemini</span>
-          <span class="tag mono">Deepgram</span>
-          <span class="tag mono">PWA</span>
-        </div>
-
-        <a href="https://mind-sort-eight.vercel.app/" target="_blank" class="cta mono">
-          Try it live
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-
-        <p class="also-built-label mono">Also built</p>
-        <p class="also-built">
-          <a href="https://github.com/Garvit-Sonawala/CodeLore" target="_blank">CodeLore</a>, a Claude Code skill that reconstructs a project's documentation, LaTeX writeup, README, decision log, architecture diagrams, straight from its git history and source, so the docs stay honest instead of drifting out of date.
-        </p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="section-head">
-        <span class="mono section-num">04</span>
-        <h2 class="section-title">Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div>
-          <p class="skill-label mono">Scientific Computing</p>
-          <p class="skill-list">Mathematica (FeynArts, FeynCalc, Package-X), Python (NumPy, SciPy, Matplotlib), Git, LaTeX, Linux</p>
-        </div>
-        <div>
-          <p class="skill-label mono">Machine Learning</p>
-          <p class="skill-list">CNNs, RNNs, Bayesian Neural Nets, PyTorch, scikit-learn</p>
-        </div>
-        <div>
-          <p class="skill-label mono">Web &amp; Database</p>
-          <p class="skill-list">React, Supabase, PostgreSQL, MySQL, Flask, SQLAlchemy</p>
-        </div>
-        <div>
-          <p class="skill-label mono">Also</p>
-          <p class="skill-list">Java, SQL, Jupyter</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <footer id="contact" class="section">
-      <div class="section-head">
-        <span class="mono section-num">05</span>
-        <h2 class="section-title">Contact</h2>
-      </div>
-      <div class="section-body">
-        <h3 class="contact-heading">Open to research internships and collaborations.</h3>
-        <p class="contact-links">
-          <a href="mailto:garvit22@iisertvm.ac.in">garvit22@iisertvm.ac.in</a>
-          &nbsp;&middot;&nbsp;
-          <a href="https://www.linkedin.com/in/garvit-sonawala-1b9339208/" target="_blank">LinkedIn</a>
-        </p>
-      </div>
-    </footer>
-
   </main>
 </div>
-<script src="assets/script.js"></script>
 </body>
 </html>
