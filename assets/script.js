@@ -1,24 +1,35 @@
-// Research entries: click a project title to expand its full writeup.
-// One entry open at a time.
+// Research page: click a project to open its full writeup in the side panel.
 document.addEventListener('DOMContentLoaded', () => {
-  const triggers = document.querySelectorAll('.entry-trigger');
+  const sidePanel = document.getElementById('side-panel');
+  const backdrop = document.getElementById('panel-backdrop');
+  const closeBtn = document.getElementById('panel-close');
+  if (!sidePanel || !backdrop || !closeBtn) return; // not on this page
 
-  triggers.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const entry = btn.closest('.entry');
-      if (!entry) return;
-      const willOpen = !entry.classList.contains('is-open');
+  const items = document.querySelectorAll('.topic-item');
+  const panels = document.querySelectorAll('.panel-body');
 
-      document.querySelectorAll('.entry.is-open').forEach((openEntry) => {
-        if (openEntry !== entry) {
-          openEntry.classList.remove('is-open');
-          const otherTrigger = openEntry.querySelector('.entry-trigger');
-          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      entry.classList.toggle('is-open', willOpen);
-      btn.setAttribute('aria-expanded', String(willOpen));
+  function openPanel(id) {
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.panelId !== id;
     });
+    sidePanel.classList.add('is-open');
+    backdrop.classList.add('is-visible');
+    sidePanel.scrollTop = 0;
+  }
+
+  function closePanel() {
+    sidePanel.classList.remove('is-open');
+    backdrop.classList.remove('is-visible');
+  }
+
+  items.forEach((btn) => {
+    btn.addEventListener('click', () => openPanel(btn.dataset.panel));
+  });
+
+  closeBtn.addEventListener('click', closePanel);
+  backdrop.addEventListener('click', closePanel);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePanel();
   });
 });
