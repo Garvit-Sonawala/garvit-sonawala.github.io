@@ -108,10 +108,25 @@ a:hover{ color: #ffffff; }
   .rail-photo{ width: 160px; height: 200px; }
 }
 
-.section-credentials{
+.credentials-row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
   margin: 0 0 2rem 0;
+}
+.section-credentials{
+  margin: 0;
   font-size: 0.8rem;
   color: var(--muted-2);
+}
+.gate-badge{
+  font-size: 0.7rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.55rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 /* ---------------- about ---------------- */
