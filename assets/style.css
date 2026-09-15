@@ -108,25 +108,10 @@ a:hover{ color: #ffffff; }
   .rail-photo{ width: 160px; height: 200px; }
 }
 
-.credentials-row{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin: 0 0 2rem 0;
-}
 .section-credentials{
-  margin: 0;
+  margin: 0 0 2rem 0;
   font-size: 0.8rem;
   color: var(--muted-2);
-}
-.gate-badge{
-  font-size: 0.7rem;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  padding: 0.15rem 0.55rem;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
 }
 
 /* ---------------- about ---------------- */
@@ -213,6 +198,9 @@ a:hover{ color: #ffffff; }
 .topic-item:hover{ padding-left: 0.5rem; }
 .topic-item:hover .topic-title{ color: var(--accent); }
 .topic-item:hover .topic-arrow{ transform: translateX(4px); color: var(--accent); }
+.topic-item-static{ cursor: default; }
+.topic-item-static:hover{ padding-left: 0; }
+.topic-item-static:hover .topic-title{ color: var(--text); }
 .topic-date{ width: 120px; flex-shrink: 0; font-size: 0.76rem; color: var(--muted-2); }
 .topic-main{ flex: 1; min-width: 0; text-align: left; }
 .topic-heading{ display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
