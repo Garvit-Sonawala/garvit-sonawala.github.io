@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('panel-close');
   if (!sidePanel || !backdrop || !closeBtn) return; // not on this page
 
-  const items = document.querySelectorAll('.topic-item');
+  const items = document.querySelectorAll('.topic-item[data-panel]');
   const panels = document.querySelectorAll('.panel-body');
 
   function openPanel(id) {
