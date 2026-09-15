@@ -354,11 +354,6 @@ a:hover{ color: #ffffff; }
   max-width: 66ch;
 }
 .project-desc:last-of-type{ margin-bottom: 1.6rem; }
-.project-meta{
-  margin: 0 0 1.6rem 0;
-  font-size: 0.8rem;
-  color: var(--muted-2);
-}
 .project-link{
   display: inline-flex;
   align-items: center;
