@@ -157,10 +157,6 @@
         <h2 class="panel-title">Research Intern, TIFR Mumbai</h2>
       </div>
       <p class="panel-sub">Supervisor: Dr. Achamveedu Gopakumar</p>
-      <div class="panel-stat">
-        <span class="panel-stat-value mono">2.4%</span>
-        <span class="panel-stat-label mono">mean chirp-mass error at high signal-to-noise</span>
-      </div>
       <p class="panel-text">Pulsar timing arrays are one of the strangest gravitational-wave detectors around: instead of an interferometer, you use millisecond pulsars themselves as cosmic clocks, spread across the galaxy, and watch for a correlated deviation in their arrival times, called a timing residual, that a slowly varying gravitational wave from a supermassive black-hole binary would leave behind. The signal you're looking for sits well below the noise floor for a huge fraction of realistic sources, which is what made this a machine learning problem as much as a physics one.</p>
       <p class="panel-text">I started by simulating twelve years of timing residuals for three real millisecond pulsars, J1909&minus;3744, J1713+0747 and J0437&minus;4715, injected with realistic Gaussian timing noise, using the 0PN quadrupole-radiation waveform for a circular supermassive black-hole binary, later extended to 2PN, which adds relativistic corrections the Newtonian approximation misses. That gave me a controlled dataset where I actually knew the true chirp mass and could dial the signal-to-noise ratio up and down to see where each method broke.</p>
       <p class="panel-text">The first model is a 1D convolutional network that just answers one question: is there a genuine signal buried in this residual, or is it noise. It's a fairly standard architecture, three convolution-batchnorm-ReLU-pooling blocks feeding into a dense classifier, but tuning it against a synthetic dataset where you control the SNR directly is what let me actually characterise its failure mode properly: close to 98% accuracy once the SNR is around 18, degrading smoothly down to about 65% by SNR 1, rather than a hard, misleading cliff.</p>
