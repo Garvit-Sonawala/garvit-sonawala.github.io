@@ -118,16 +118,20 @@
         <span class="now-tag mono">Now</span>
       </div>
       <p class="panel-sub">Supervisor: Dr. Rusa Mandal</p>
-      <div class="panel-stat">
-        <span class="panel-stat-value mono">~4&sigma;</span>
-        <span class="panel-stat-label mono">reported tension in global fits, even after RK/RK* resolved</span>
-      </div>
-      <p class="panel-text">The Standard Model has one obvious gap: it gives no reason for why the three generations of fermions have such different masses and mixing patterns, something people call the flavour puzzle. Rare decays are one of the few places you can actually go looking for an answer to that, because a transition like b &rarr; s&#8467;+&#8467;&minus; is forbidden at tree level, loop-suppressed, and further suppressed by an almost-exact cancellation (the GIM mechanism) that only fails because the top quark is so much heavier than the up and charm quarks. A process that suppressed is unusually sensitive: even a small new particle contributing inside the loop can shift the result by a measurable amount, in a way a tree-level process never would.</p>
-      <p class="panel-text">B &rarr; K*&#8467;+&#8467;&minus; is exactly this kind of decay, and one particular observable built from it, P5&prime;, has sat in mild but genuine tension with the Standard Model prediction for years, in the most recent LHCb dataset as much as the earlier ones, even after two more dramatic anomalies nearby, RK and RK*, turned out to resolve back to the Standard Model once the 2022 measurement improved its treatment of backgrounds. Whether the remaining gap is new physics or just an underestimated hadronic effect is still an open, actively debated question, and that's the gap my thesis, under Dr. Rusa Mandal at IIT Gandhinagar, is trying to compute cleanly enough to actually say something about.</p>
-      <p class="panel-text">The approach is to build the calculation from the ground up rather than start from a published result: draw the Feynman diagrams for the underlying quark-level transition, work through the loop integrals, and match the result onto an effective Hamiltonian, the standard way of separating the short-distance physics you can compute perturbatively from the long-distance, non-perturbative physics of how quarks are actually bound inside real B and K* mesons, which has to come from lattice QCD or light-cone sum rules instead. What falls out of the matching are two numbers called Wilson coefficients, and whether there's new physics hiding in this decay comes down to whether those numbers agree with the Standard Model or not.</p>
-      <p class="panel-text">I'm building it as a reusable computational pipeline rather than a one-off derivation, using Mathematica's FeynArts, FeynCalc and Package-X to generate the diagrams and reduce the loop integrals symbolically, so the same machinery can eventually be pointed at a different new-physics model, or a different rare decay entirely, without redoing the calculation by hand each time.</p>
-      <p class="panel-text">It's early, unpublished work, so I'm leaving the actual results out of this for now. But the shape of the question, given a theory, what does it actually predict, and does that number survive contact with real data, is the same one that's carried me through freeze-out and gravitational waves before this.</p>
-    </div>
+        <div class="panel-stat">
+    <span class="panel-stat-value mono">b &rarr; s&#8467;+&#8467;&minus;</span>
+    <span class="panel-stat-label mono">from underlying theory to measurable observables</span>
+  </div>
+
+  <p class="panel-text">My current project focuses on rare flavour-changing decays, particularly the b &rarr; s&#8467;+&#8467;&minus; transition. I first worked through the theoretical framework connecting an underlying Lagrangian to the low-energy description of the process: defining the relevant operators, matching the short-distance theory onto the Weak Effective Theory, and obtaining the corresponding Wilson coefficients such as C<sub>9</sub> and C<sub>10</sub>.</p>
+
+  <p class="panel-text">The effective theory describes the short-distance quark-level physics, but the quarks themselves are confined inside hadrons. To connect the calculation to a physical process such as B &rarr; K*&#8467;+&#8467;&minus;, the effective operators have to be combined with hadronic matrix elements. These are expressed through form factors and other hadronic quantities, which are obtained using non-perturbative approaches such as lattice QCD and light-cone sum rules, allowing the calculation to be carried through to experimentally measurable observables.</p>
+
+  <p class="panel-text">I am now working on the model-dependent side of this calculation: starting from a specified set of new interactions and determining how they modify the Wilson coefficients. I am building a computational pipeline that combines FeynRules, FeynArts, FeynCalc, Package-X and related tools to generate the relevant loop diagrams, construct the amplitudes, reduce the loop integrals, and match the resulting contributions onto the effective operators.</p>
+
+  <p class="panel-text">The goal is to make this calculation modular and reusable rather than deriving each new-physics contribution independently by hand. Given a model and its interactions, the pipeline should be able to propagate them through the calculation from the underlying Lagrangian to the corresponding shifts in the Wilson coefficients, and eventually to the predicted rare-decay observables.</p>
+
+  <p class="panel-text">Ultimately, the computation serves a physics goal: to determine whether a well-motivated new-physics contribution can modify the relevant Wilson coefficients enough to reduce the discrepancy between theoretical predictions and the observed rare B-decay observables. The project is therefore as much about building a reliable route from theory to prediction as it is about understanding where new physics could enter that chain.</p>
 
     <div class="panel-body" data-panel-id="borophene" hidden>
       <p class="panel-date mono">JAN &ndash; MAY 2026</p>
